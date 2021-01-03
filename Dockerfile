@@ -5,15 +5,7 @@ USER root
 
 
 RUN apt update  
-RUN apt-get install -y git \
-		pkg-config build-essential rtorrent unzip unrar-free \
-		mediainfo curl php-fpm php-cli php-geoip php-mbstring php-zip \
-		nginx wget ffmpeg supervisor php-xml libarchive-zip-perl \
-		libjson-perl libxml-libxml-perl irssi sox libgcrypt20  libssl-dev \
-		nano libcppunit-dev libsigc++-2.0-dev automake1.11
-
-
-RUN apt install -y python3
+RUN apt install -y python3 git nano wget curl
 
 RUN rm /root/.bash_history ; \
     mkdir -p /root/synology/ ; \

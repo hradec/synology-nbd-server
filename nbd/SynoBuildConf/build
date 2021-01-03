@@ -7,6 +7,8 @@ case ${MakeClean} in
 		;;
 esac
 
+env
+
 #export CC=/usr/local/i686-pc-linux-gnu/bin/i686-pc-linux-gnu-gcc
 #export CXX=/usr/local/i686-pc-linux-gnu/bin/i686-pc-linux-gnu-gxx
 export CC=$(find /usr/local/ -name "*gnu-gcc" | grep '/bin/')
@@ -14,6 +16,7 @@ export CXX=$(find /usr/local/ -name "*gnu-g++" | grep '/bin/')
 
 echo "CC=$CC"
 echo "CXX=$CXX"
+
 
 # Or you can use Makefile to genarate executable.
 cmd="./configure --without-gnutls"

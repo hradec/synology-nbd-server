@@ -4,8 +4,6 @@ pkg=nbd-3.20
 version=6.2
 platform=evansport
 
-rm ./$pkg-*.spk
-
 install_source() {
 	CD="$(pwd)"
 	rm -rf ./synology/source/$pkg

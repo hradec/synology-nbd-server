@@ -3,7 +3,7 @@
 CD=$(dirname $(readlink -f $BASH_SOURCE))/../
 cd $CD
 
-docker build . -t synology_build_env
+docker build $CD -f $CD/Dockerfile -t synology_build_env
 
 docker rm -f synology_build_env
 mkdir -p $CD/synology/source/
