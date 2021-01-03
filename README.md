@@ -18,6 +18,6 @@ All that is needed to build is to create the following files in a folder with th
   | `<pkg>/scripts/start-stop-status` | the main script responsible for starting, stopping and verify if the package is running or not. |
   
   
-Apart from those, the `<pkgname>_build.sh` script also needs to be created to extract/copy the original package source code to be built and copying/creating the files above to `synology/source/<pkgname>/`, where Synologys toolkit will look for when running. (my `nbd_build.sh` script is a good starting point as well!)
+Apart from those, the `<pkgname>_build.sh` script also needs to be created to extract/copy the original package source code and copy the files above to `synology/source/<pkgname>/`, where Synologys toolkit will look for when building. (my `nbd_build.sh` script is a good starting point as well!)
 
 Enjoy! 
