@@ -1,0 +1,24 @@
+#!/bin/bash
+# Copyright (C) 2000-2016 Synology Inc. All rights reserved.
+
+case ${MakeClean} in
+	[Yy][Ee][Ss])
+		make clean
+		;;
+esac
+
+#export CC=/usr/local/i686-pc-linux-gnu/bin/i686-pc-linux-gnu-gcc
+#export CXX=/usr/local/i686-pc-linux-gnu/bin/i686-pc-linux-gnu-gxx
+export CC=$(find /usr/local/ -name "*gnu-gcc" | grep '/bin/')
+export CXX=$(find /usr/local/ -name "*gnu-g++" | grep '/bin/')
+
+echo "CC=$CC"
+echo "CXX=$CXX"
+
+# Or you can use Makefile to genarate executable.
+cmd="./configure --without-gnutls"
+echo $cmd
+eval $cmd
+cmd="make ${MAKE_FLAGS}"
+echo $cmd
+eval $cmd

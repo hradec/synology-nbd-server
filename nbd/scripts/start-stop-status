@@ -1,0 +1,31 @@
+#!/bin/sh
+# Copyright (C) 2000-2016 Synology Inc. All rights reserved.
+
+case $1 in
+	start)
+		### Start this package.
+		/bin/nbd-server 2>/var/log/nbd_server.log 2>&1
+		exit 0
+	;;
+	stop)
+		### Stop this package.
+		killall -9 nbd-server
+		exit 0
+	;;
+	status)
+		### Check package alive.
+		if [ -h "/usr/bin/nbd-server" ]; then
+			exit 0
+		else
+			exit 1
+		fi
+	;;
+	killall)
+		killall -9 nbd-server
+		exit 0
+        ;;
+	log)
+		exit 0
+	;;
+esac
+
