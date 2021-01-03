@@ -1,4 +1,5 @@
 # Ignore everything by default
 *
 # And then explicitly include just what we want
-!synology
+packages
+synology
