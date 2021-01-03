@@ -28,6 +28,7 @@ else
 
 	./build_scripts/run.sh /bin/bash -c "
 		cd /root/synology &&
+	        git clone https://github.com/SynologyOpenSource/pkgscripts-ng.git  ./pkgscripts-ng || (cd ./pkgscripts-ng && git pull && cd .. ) &&  \
 		( [ ! -e build_env/ds.$platform-$version ] && ./pkgscripts-ng/EnvDeploy -v $version -p $platform || true ) &&
 		rm -rf build_env/*/source/* && \
 		pkgscripts-ng/PkgCreate.py -v $version -p $platform $pkg &&
