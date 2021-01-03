@@ -3,7 +3,7 @@ A nbd-server package for synology DSM.
 
 I've made this to build nbd-server 3.20 for the ds415play, which doesn't have NBD by default.
 
-It uses docker to build inside an Ubuntu container, using Synology own toolkit. 
+It uses docker to build inside an Ubuntu container, using Synologys toolkit. So, you one just need to have docker installed to be able to build this package.
 
 This depot can be used to build other linux packages as well, with just basic knownledge of Synology toolkit. 
 
